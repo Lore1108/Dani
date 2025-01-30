@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Citas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Agenda tu Cita</h1>
+    
+    <h2>Datos de la Cliente</h2>
+    <form id="formulario">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="email" id="email" placeholder="Correo Electrónico" required>
+        <input type="tel" id="telefono" placeholder="Teléfono" required>
+        
+        <h2>Selecciona un servicio</h2>
+        <select id="categoria" onchange="actualizarServicios()">
+            <option value="">Selecciona una categoría</option>
+            <option value="manicura">Manicura</option>
+            <option value="cabello">Cabello</option>
+            <option value="depilacion">Depilación</option>
+        </select>
+        
+        <select id="servicio">
+            <option value="">Selecciona un servicio</option>
+        </select>
+        
+        <h2>Selecciona una hora</h2>
+        <select id="horas">
+            <option value="09:00">09:00 AM</option>
+            <option value="10:00">10:00 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="12:00">12:00 PM</option>
+            <option value="13:00">01:00 PM</option>
+            <option value="14:00">02:00 PM</option>
+            <option value="15:00">03:00 PM</option>
+            <option value="16:00">04:00 PM</option>
+            <option value="17:00">05:00 PM</option>
+            <option value="18:00">06:00 PM</option>
+            <option value="19:00">07:00 PM</option>
+            <option value="20:00">08:00 PM</option>
+            <option value="21:00">09:00 PM</option>
+        </select>
+    </form>
+    
+    <h2 id="mes-actual"></h2>
+    <div id="calendario-container">
+        <button class="boton-mes" onclick="cambiarMes(-1)" style="
+    width: 30px;" >&lt;</button>
+        <div id="calendario"></div>
+        <button class="boton-mes" onclick="cambiarMes(1)" style="
+    width: 30px;" >&gt;</button>
+    </div>
+    <button type="button" onclick="agendarCita()">Agendar</button>
+
+</body>
+<script src="javascript.js"></script>
+</html>
