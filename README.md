@@ -1,2 +1,0 @@
-# Dani
-Angedas para dani
